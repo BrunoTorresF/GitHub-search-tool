@@ -5,7 +5,7 @@ class UserSearch extends React.Component{
     super(props);
     this.state = {
       location : '' ,
-      language : '' ,
+      language : '' 
     }
 
 
