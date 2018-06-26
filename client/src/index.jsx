@@ -1,17 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import $ from 'jquery' ;
 
 class App extends React.Component {
-  render() {
-    return (<BrowserRouter>
-      <MuiThemeProvider>
-        <Route path="/" component={PrimaryLayout}/>
-      </MuiThemeProvider>
-    </BrowserRouter>)
+  render(){
+    return (
+      <h1>hello world</h1>
+    )
   }
-};
+}
 
-
-
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(<App/>, document.getElementById('app'));
