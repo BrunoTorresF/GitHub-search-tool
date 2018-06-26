@@ -1,10 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import UserSearch from './components/UserSearch.jsx'
 class App extends React.Component {
   render(){
     return (
-      <h1>hello world</h1>
+      <div>
+      <h1>GitHub Search Tool</h1>
+      <div>
+      <UserSearch/>
+      </div>
+      </div>
+
+
+
     )
   }
 }

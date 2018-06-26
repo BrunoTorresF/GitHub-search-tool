@@ -5,12 +5,9 @@ class UserSearch extends React.Component{
     super(props);
     this.state = {
       location : '' ,
-      language : '' 
+      language : ''
     }
 
-
-    this.updateLocation = this.updateLocation.bind(this);
-    this.updateLanguage = this.UpdateLocation.bind(this);
 
 
   }
@@ -29,5 +26,14 @@ class UserSearch extends React.Component{
     })
   }
 
-
+render(){
+  return(
+    <div>
+    <input type="text" name="location" placeHolder='location'/>
+    <input type="text" name="language" placeHolder='language'/>
+    </div>
+  );
 }
+}
+
+export default UserSearch;
