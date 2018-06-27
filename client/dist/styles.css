@@ -23,3 +23,7 @@
   padding: 12px 20px;
   width: 40%;
 }
+
+.github-logo{
+  position: sticky;
+}
