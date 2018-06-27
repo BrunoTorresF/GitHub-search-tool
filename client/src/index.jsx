@@ -5,9 +5,9 @@ class App extends React.Component {
   render(){
     return (
       <div>
-         <h1>GitHub Search Tool</h1>
+         <img src='gitHubIcon.png' className='github-logo' class='center'/>
          <div>
-         <img src='images.png' className='github-logo'/>
+            <h1 className='title'>GitHub Search Tool</h1>
          </div>
        <div>
          <UserSearch/>
