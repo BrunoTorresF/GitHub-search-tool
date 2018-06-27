@@ -1,5 +1,8 @@
 import React from 'react';
 
+
+
+
 class UserSearch extends React.Component{
   constructor(props){
     super(props);
@@ -29,8 +32,13 @@ class UserSearch extends React.Component{
 render(){
   return(
     <div>
-    <input type="text" name="location" placeHolder='location'/>
-    <input type="text" name="language" placeHolder='language'/>
+      <input type="text" name="location" placeholder='location' className="location-input"/>
+        <div>
+        </div>
+      <input type="text" name="language" placeholder='language' className="language-input"/>
+      <div>
+      <button onClick={(e) => this.handleClick(e)} label="Go!" className="search-button">Search</button>
+      </div>
     </div>
   );
 }
