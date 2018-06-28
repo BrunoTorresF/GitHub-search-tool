@@ -1,13 +1,34 @@
+
 const express = require ('express');
-var express_graphql = require('express-graphql');
-var { buildSchema } = require('graphql');
 const bodyParser = require("body-parser");
-const app = express();
+const app = express()
+const graphqlHTTP = require('express-graphql');
+const { buildSchema } = require('graphql');
+
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// Construct a schema, using GraphQL schema language
+var schema = buildSchema(`
+  type Query {
+    hello: String
+  }
+`);
+
+// The root provides a resolver function for each API endpoint
+const root = {
+  hello: () => {
+    return 'Hello world!';
+  },
+};
+
+app.use('/graphql', graphqlHTTP({
+  schema: schema,
+  rootValue: root,
+  graphiql: true,
+}));
 
 
 var port = process.env.PORT || 8080;
