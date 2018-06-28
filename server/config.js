@@ -11,7 +11,7 @@ app.use(express.static(__dirname + '/../client/dist'));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Construct a schema, using GraphQL schema language
-var schema = buildSchema(`
+const schema = buildSchema(`
   type Query {
     hello: String
   }
@@ -31,7 +31,7 @@ app.use('/graphql', graphqlHTTP({
 }));
 
 
-var port = process.env.PORT || 8080;
+const port = process.env.PORT || 8080;
 
 app.listen(port, function() {
   console.log(`Listening to Port ${port}!!!`);
