@@ -1,5 +1,18 @@
 import React from 'react';
 
-class results extends React.Component{
+class Results extends React.Component{
+  constructor(props){
+    super(props);
+  }
 
+
+render(){
+  return(
+    <div>
+      <h2>Results</h2>
+    </div>
+  )
 }
+}
+
+export default Results;

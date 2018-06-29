@@ -32,10 +32,12 @@ class UserSearch extends React.Component{
 render(){
   return(
     <div>
-      <input type="text" name="location" placeholder='location' className="location-input"/>
         <div>
+          <input type="text" name="location" placeholder='location' className="location-input"/>
         </div>
-      <input type="text" name="language" placeholder='language' className="language-input"/>
+         <div>
+           <input type="text" name="language" placeholder='language' className="language-input"/>
+         </div>
       <div>
       <button onClick={(e) => this.handleClick(e)} label="Go!" className="search-button">Search</button>
       </div>
