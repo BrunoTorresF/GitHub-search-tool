@@ -1,5 +1,5 @@
 import React from 'react';
 
-class results extends React.Component{
+class Results extends React.Component{
 
 }
