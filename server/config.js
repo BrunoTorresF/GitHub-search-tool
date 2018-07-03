@@ -1,10 +1,10 @@
-r
 const express = require ('express');
 const bodyParser = require("body-parser");
 const graphqlHTTP = require('express-graphql');
 const { buildSchema } = require('graphql');
 const app = express()
 //Requierements and app are declared above.
+//'16000289fc7a2f6fec7f6589838045855198864a'
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
