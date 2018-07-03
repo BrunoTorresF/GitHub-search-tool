@@ -15,7 +15,7 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        <img src='gitHubIcon.png' className='github-logo' class='center'/>
+        <img src='gitHubIcon.png' className='github-logo'/>
          <div>
             <h1 className='title'>GitHub Search Tool</h1>
          </div>

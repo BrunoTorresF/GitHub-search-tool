@@ -3,7 +3,8 @@
  color: white;
  background-color: #fc4c02;
  border :2px solid #fc4c02;
- border-radius: 12px
+ border-radius: 12px;
+ margin: 8px;
 
 }
 
@@ -25,8 +26,10 @@
 }
 
 .github-logo{
-  position: sticky;
-}
+      margin: auto 5px;
+      float: center;
+      margin-left:830px;
+    }
 
   .center {
     display: block;

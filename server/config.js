@@ -1,10 +1,10 @@
-
+r
 const express = require ('express');
 const bodyParser = require("body-parser");
-const app = express()
 const graphqlHTTP = require('express-graphql');
 const { buildSchema } = require('graphql');
-
+const app = express()
+//Requierements and app are declared above.
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
@@ -15,8 +15,11 @@ const schema = buildSchema(`
   type Query {
     hello: String
   }
-`);
 
+
+
+`);
+//user is going to  search for users by location and/or language.
 // The root provides a resolver function for each API endpoint
 const root = {
   hello: () => {
