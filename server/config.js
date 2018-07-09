@@ -1,4 +1,4 @@
-const express = require ('express');
+const express = require('express');
 const bodyParser = require("body-parser");
 const app = express();
 const request = require('request');
@@ -9,8 +9,9 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
 app.get('/search/users', function(req, res) {
-    request('https://api.github.com/search/users?q=location:mexico+language:javascript', function(error, response, body) {
-        res.json(body)
+  request('https://api.github.com/search/users?q=location:mexico+language:javascript',
+    function(error, response, body) {
+      res.json(body)
     });
 });
 
