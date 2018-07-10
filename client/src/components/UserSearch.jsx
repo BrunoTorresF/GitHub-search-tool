@@ -8,7 +8,10 @@ class UserSearch extends React.Component {
       location: '',
       language: ''
     }
+//we need to bind
 
+    this.updateLocation = this.updateLocation.bind(this);
+    this.updateLanguage = this.updateLanguage.bind(this);
 
 
   }
@@ -27,35 +30,24 @@ class UserSearch extends React.Component {
     })
   }
 
+
   render() {
-    return ( <
-      div >
-      <
-      div >
-      <
-      input type = "text"
-      name = "location"
-      placeholder = 'location'
-      className = "location-input" / >
-      <
-      /div> <
-      div >
-      <
-      input type = "text"
-      name = "language"
-      placeholder = 'language'
-      className = "language-input" / >
-      <
-      /div> <
-      div >
-      <
-      button onClick = {
-        (e) => this.handleClick(e)
-      }
-      label = "Go!"
-      className = "search-button" > Search < /button> <
-      /div> <
-      /div>
+    return (
+      <div >
+      <div >
+
+       Location: <input onChange={this.updateLocation} value={this.state.location}
+          type = "text" name = "location" className = "location-input" / >
+
+      </div>
+      <div >
+      Languange: <input onChange={this.updateLanguage} value={this.state.language}
+        type = "text" name = "language"  className = "language-input" / >
+      </div>
+       <div >
+      <button onClick = {(e) => this.handleClick(e)} label = "Go!" className = "search-button" > Search < /button>
+      </div>
+      </div>
     );
   }
 }

@@ -9,6 +9,9 @@ const request = require('request');
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
+
+//need to change the location and language input to be the one inputed by client
+
 app.get('/search/users', function(req, res) {
   request('https://api.github.com/search/users?q=location:mexico+language:javascript',
     function(error, response, body) {

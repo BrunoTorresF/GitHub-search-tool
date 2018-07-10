@@ -5,36 +5,21 @@ import Results from './components/Results.jsx';
 
 
 class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-
-    }
-  }
-
   render() {
-    return ( <
-      div >
-      <
-      img src = 'gitHubIcon.png'
+    return (
+      <div >
+      <img src = 'gitHubIcon.jpg'
       className = 'github-logo' / >
-      <
-      div >
-      <
-      h1 className = 'title' > GitHub Search Tool < /h1> <
-      /div> <
-      div >
-      <
-      UserSearch / >
-      <
-      /div> <
-      div >
-      <
-      Results / >
-      <
-      /div> <
-      /div>
-
+      <div >
+        <h1 className = 'title'> GitHub Search Tool </h1>
+      </div>
+      <div>
+        <UserSearch />
+      </div>
+      <div>
+        <Results / >
+      </div>
+      </div>
     )
   }
 }
