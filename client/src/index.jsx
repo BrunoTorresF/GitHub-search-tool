@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import UserSearch from './components/UserSearch.jsx'
 import Results from './components/Results.jsx';
-import axios from 'axios';
 
 
 class App extends React.Component {
@@ -12,6 +11,16 @@ class App extends React.Component {
 
     }
   }
+  //fetch('https://api.github.com/graphql', {
+  //method:'GET',
+  //headers: { 'Content-Type': 'application/json' },
+  //body: JSON.stringify({ query: '{ posts { title } }' }),
+//})
+  //.then(res => res.json())
+  //.then(res => console.log(res.data));
+
+
+
   render(){
     return (
       <div>

@@ -4,8 +4,8 @@ const bodyParser = require("body-parser");
 const app = express()
 const graphqlHTTP = require('express-graphql');
 const { buildSchema } = require('graphql');
-//'16000289fc7a2f6fec7f6589838045855198864a'
-
+//'69fa9bcadb2669ae43d70dd20101c13fb9551349'
+// this key has access to user public_repo repo repo_deployment repo:status read:repo_hook read:org read:public_key read:gpg_key
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
@@ -13,8 +13,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Construct a schema, using GraphQL schema language
 const schema = buildSchema(`
-  type Query {
+  query {
     hello: String
+  },
+  query{
+    name:string
   }
 `);
 
@@ -30,6 +33,8 @@ app.use('/graphql', graphqlHTTP({
   rootValue: root,
   graphiql: true,
 }));
+
+
 
 
 const port = process.env.PORT || 8080;
