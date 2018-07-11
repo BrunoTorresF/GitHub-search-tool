@@ -12,6 +12,17 @@ class App extends React.Component {
 
     }
   }
+
+    searchForUser(location, language) {
+     axios.get('https://api.github.com/search/users?q=location:'+location)
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    }
+
   render() {
     return ( <
       div >
