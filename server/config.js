@@ -5,15 +5,28 @@ const request = require('request');
 //Requierements and app are declared above.
 //'16000289fc7a2f6fec7f6589838045855198864a'
 
+
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
+<<<<<<< HEAD
 // app.get('/search/users', function(req, res) {
 //   request('https://api.github.com/search/users?q=location:mexico+language:javascript',
 //     function(error, response, body) {
 //       res.json(body)
 //     });
 // });
+=======
+
+//need to change the location and language input to be the one inputed by client
+
+app.get('/search/users', function(req, res) {
+  request('https://api.github.com/search/users?q=location:mexico+language:javascript',
+    function(error, response, body) {
+      res.json(body)
+    });
+});
+>>>>>>> b6cabd54b1ce20686ed24a7dfe025e872a947d8c
 
 
 
