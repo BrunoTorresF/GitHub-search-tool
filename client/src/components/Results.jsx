@@ -6,11 +6,11 @@ class Results extends React.Component {
   }
 
   render() {
-    return ( <
-      div >
-      < h2 > Results < /h2> <
-      /div>
-    )
+    return (
+      <div>
+        <h2> Results </h2>
+      </div>
+    );
   }
 }
 
